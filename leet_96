@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/unique-binary-search-trees/
-
+// it's the Catalan Number....I use the recursive formula along with DP to make it faster
 int numTrees(int n){
     int arr[n+1];
     arr[0]=1;
