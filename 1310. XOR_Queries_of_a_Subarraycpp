@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<int> xorQueries(vector<int>& arr, vector<vector<int>>& queries) {
+        int s = arr.size();
+        int xo = 0;
+        vector <int> prefix;
+        for (int i = 0; i < s ; i++)
+        {xo^=arr[i];
+            prefix.push_back(xo);}
+        
+        vector <int> res;
+        for (auto i : queries)
+        {int l = i[0];
+            int r = i[1];
+            
+            int y =l==0?prefix[r]:prefix[l-1]^prefix[r];
+        res.push_back(y);}
+        return res;
+        
+        
+        
+    }
+};
+    
+
